@@ -13,19 +13,29 @@ body {
   color: var(--body-text);
   padding: 1.5rem;
   transition: all 0.3s ease;
+  margin: 0;
 }
 
 header {
   background: var(--blue);
   color: white;
-  padding: 2rem;
-  text-align: center;
+  padding: 1.5rem 2rem;
   border-radius: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .logo {
   max-width: 160px;
-  margin-bottom: 1rem;
+  margin-right: 1.5rem;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
 }
 
 main {
@@ -43,6 +53,24 @@ section {
 section h2 {
   color: var(--blue);
   margin-bottom: 1rem;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+nav a:hover {
+  color: var(--yellow);
 }
 
 /* Contact Form */
@@ -53,6 +81,7 @@ form {
 
 label {
   margin: 0.8rem 0 0.3rem;
+  font-family: 'Lato', sans-serif;
 }
 
 input, textarea {
@@ -60,6 +89,7 @@ input, textarea {
   font-size: 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
+  font-family: 'Inter', sans-serif;
 }
 
 button {
@@ -71,10 +101,45 @@ button {
   padding: 0.7rem 1.4rem;
   border-radius: 8px;
   cursor: pointer;
+  font-family: 'Inter', sans-serif;
 }
 
 button:hover {
   background: #e5b800;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.product-item {
+  text-align: center;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease;
+}
+
+.product-item:hover {
+  background: #f0f4f8;
+}
+
+.product-item img {
+  max-width: 50px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.product-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--body-text);
+  font-family: 'Lato', sans-serif;
 }
 
 /* Footer */
@@ -82,6 +147,7 @@ footer {
   margin-top: 3rem;
   text-align: center;
   color: #777;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Responsive */
@@ -92,6 +158,30 @@ footer {
 
   section {
     padding: 1.2rem;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  nav {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  nav a {
+    margin-left: 1rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -116,5 +206,13 @@ footer {
   button {
     background: var(--yellow);
     color: #000;
+  }
+
+  .product-item {
+    background: #2c2c2c;
+  }
+
+  footer {
+    color: #bbb;
   }
 }
